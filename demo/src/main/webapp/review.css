@@ -1,0 +1,131 @@
+@charset 'utf-8';
+
+.block1 {
+  display: flex;
+  flex-direction: column;
+}
+/*
+.review {
+    display: flex;
+    top: 50px;
+    left: 60px;
+    width: 400px;
+}
+*/
+.test {
+  display: flex;
+  top: 50px;
+  left: 60px;
+  width: 300px;
+}
+
+.satisfaction_score {
+  display: flex;
+}
+
+.satis_review {
+  display: flex;
+}
+
+.review_percent {
+  display: flex;
+}
+
+.container1 {
+  height: 72vh;
+  width: 42vw;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.star-ratings {
+  color: #aaa9a9;
+  position: relative;
+  unicode-bidi: bidi-override;
+  width: max-content;
+  -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1.3px;
+  -webkit-text-stroke-color: #2b2a29;
+}
+
+.star-ratings-fill {
+  color: #fff58c;
+  padding: 0;
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  -webkit-text-fill-color: gold;
+}
+
+.star-ratings-base {
+  z-index: 0;
+  padding: 0;
+}
+
+.star-rating {
+  border: solid 1px #ccc;
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 1.5em;
+  justify-content: space-around;
+  padding: 0 0.2em;
+  text-align: center;
+  width: 5em;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.star-rating :checked ~ label {
+  color: #f90;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+  color: #fc0;
+}
+
+.pf_image {
+  width: 30px;
+  height: 30px;
+  margin-left: 15px;
+  object-fit: cover;
+}
+
+.user_review {
+  font-family: "Noto Sans KR", sans-serif;
+  position: relative;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.review_text {
+  margin: 10px;
+}
+
+.button {
+  width: fit-content;
+  border-radius: 10px;
+  font-family: "Noto Sans KR", sans-serif;
+  background-color: #ffc558;
+}
+
+.bul_image {
+  position: absolute;
+  right: 10px;
+  width: 220px;
+  height: 220px;
+  float: right;
+  overflow: hidden;
+}

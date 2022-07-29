@@ -1,0 +1,242 @@
+@charset    'utf-8';
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+    width: 100%;
+    height: 100%;
+}
+body {
+    background-color: #f5fffa;
+    width: 100%;
+    height: 100%;
+}
+a {
+    text-decoration: none;
+}
+a:link {
+    color : #1b5ac2;
+}
+a:visited {
+    color : #1b5ac2;
+}
+a:hover {
+    color : black;
+}
+a:active {
+    color : #1b5ac2;
+}
+.headline {
+    position: fixed;
+    font-size: 18px;
+    font-weight: bold;
+    width: 200px;
+    display: block;
+    margin: auto;
+    margin-left: 11px;
+    top: 20px;
+    left: 20px;
+    text-decoration-color: #6495ed!important;
+}
+.search {
+    position: fixed;
+    width: 500px;
+    top: 10px;
+    left: 120px;
+    margin: 0 auto;
+}
+
+input {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid #6495ed;
+    margin: 10px 0;
+    padding: 10px 12px;
+    padding-left: 50px;
+    font-family: fontAwesome;
+}
+/*TODO 모바일 화면에서 보여주는 것 구축 */
+input:focus {
+    outline: 1px solid #b0c4de
+}
+.fa-search {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 15px;
+    top: 24px;
+    margin: 0;
+}
+.content {
+    position: fixed;
+    top: 80px;
+    width: 100%;
+    height: 95%;
+}
+.map_wrap {
+    width:65%;
+    float:left;
+    height: 600px;
+    margin-left: 20px;
+}
+#map{
+    border: 3px solid #6495ed;
+    border-radius: 20px;
+
+}
+.radius_border{
+    border:1px solid #919191;
+    border-radius:5px;
+}     
+.custom_zoomcontrol {
+    position:absolute;
+    overflow:hidden;
+    z-index:10;
+    top:15%;
+    right:35%;
+    width:36px;
+    height:80px;
+    background-color:#f5f5f5;
+} 
+.custom_zoomcontrol span {
+    display:block;
+    width:35px;
+    height:40px;
+    text-align:center;
+    cursor:pointer;
+}     
+.custom_zoomcontrol span img {
+    width:15px;
+    height:15px;
+    padding:12px 0;
+    border:none;
+}             
+.custom_zoomcontrol span:first-child{
+    border-bottom:1px solid #bfbfbf;
+}  
+#result{
+    position:absolute;
+    top:10%;
+    left:5%;
+    z-index:10;
+}          
+
+
+/* TODO 근처 리뷰 css */
+.firstReview {
+    position: absolute;
+    width: 25%;
+    height: 600px;
+    top: 0px;
+    left: 70%;
+    border: 3px solid #6495ed;
+    border-radius: 20px;
+}
+
+.global-tabs {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* .test {
+    position: relative;
+    left: 10px;
+    width: 300px;
+} */
+
+.review-part1 {
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%
+}
+/* 
+.satisfaction_score{
+    display: flex;
+} */
+
+.satis_review{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+.review_percent{
+    display: flex;
+}
+
+.container1 {
+    display: flex;
+    width: 100%;
+    height: 40%;
+    margin-top: 5px;
+    justify-content: center;
+    align-items: center;
+}
+img{
+    width: 85%;
+    height: 100%;
+}
+#img1 {
+    outline: 2px solid #6495ed;
+    border-radius: 20px;
+
+}
+
+.star-ratings {
+    color: #aaa9a9; 
+    position: relative;
+    unicode-bidi: bidi-override;
+    width: max-content;
+    -webkit-text-fill-color: transparent; /* Will override color (regardless of order) */
+    -webkit-text-stroke-width: 1.3px;
+    -webkit-text-stroke-color: #2b2a29;
+}
+
+.star-ratings-fill {
+    color: #fff58c;
+    padding: 0;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    -webkit-text-fill-color: gold;
+}
+
+.star-ratings-base {
+    z-index: 0;
+    padding: 0;
+}
+
+
+.star-rating {
+    border:solid 1px #ccc;
+    display:flex;
+    flex-direction: row-reverse;
+    font-size:1.5em;
+    justify-content:space-around;
+    padding:0 .2em;
+    text-align:center;
+    width:5em;
+}
+
+.star-rating input {
+    display:none;
+}
+
+.star-rating label {
+    color:#ccc;
+    cursor:pointer;
+}
+
+.star-rating :checked ~ label {
+    color:#f90;
+}
+
+.star-rating label:hover,
+.star-rating label:hover ~ label {
+    color:#fc0;
+}

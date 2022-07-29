@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>대학생 방구하기 - 대방</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="headline">
+        <a href="index.html">대 방</a>
+    </div>
+    <div class="search">
+        <i class="fas fa-search"></i>
+        <input type="text" id="searchText" onkeypress="enterkey(event)" placeholder="주소 또는 학교명을 입력하세요" style="padding-left: 50px">
+    </div>
+
+    <!--TODO 지도 API 영역 -->
+    <div class="content">
+        <div class="map_wrap">
+            <div id="map" style="width:100%;height:100%;">
+            </div>
+            <p id="result"></p>
+        
+            <!-- 지도타입 컨트롤 div 입니다 -->
+          
+            <!-- 지도 확대, 축소 컨트롤 div 입니다 -->
+            <div class="custom_zoomcontrol radius_border"> 
+                <span onclick="zoomIn()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_plus.png" alt="확대"></span>  
+                <span onclick="zoomOut()"><img src="https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/ico_minus.png" alt="축소"></span>
+            </div>
+        </div>
+        
+        <p id="result"></p>
+    
+        <!--TODO 근처 리뷰 html-->
+        <div class="firstReview">
+            <div class="global-tabs">
+				<a href="#" class="global-tab-0">최신 리뷰</a>
+				<a href="#" class="global-tab-1">베스트 건물</a>
+				<a href="#" class="global-tab-2">찜리스트</a>
+			</div>
+            <div class="container1">
+                <img id="img1" src="/신촌로7안길 80.jpg" alt="" />
+            </div>
+            
+            <!-- <p>신촌로 7안길 80<br/>평가 17개 <br/>(41.2%가 이 건물을 추천합니다.)</p> -->
+            
+            <div class="test">
+                <div class="review-part1">
+                    <span class="review-part2">건물</span>
+                    <span color="#f67f71" class="ScoreBar1">3.0</span>
+                    <div class="star-ratings">
+                        <div class="star-ratings-fill space-x-2 text-lg" style="width: 50px">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <div class="star-ratings-base space-x-2 text-lg">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-part1">
+                    <span class="review-part2">교통</span>
+                    <span color="#f67f71" class="ScoreBar1">3.0</span>
+                    <div class="star-ratings">
+                        <div class="star-ratings-fill space-x-2 text-lg" style="width: 50px">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <div class="star-ratings-base space-x-2 text-lg">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-part1">
+                    <span class="review-part2">생활</span>
+                    <span color="#44dc5e" class="ScoreBar2">4.0</span>
+                    <div class="star-ratings">
+                        <div class="star-ratings-fill space-x-2 text-lg" style="width: 60px">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <div class="star-ratings-base space-x-2 text-lg">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="review-part1">
+                    <span class="review-part2">환경</span>
+                    <span color="#44dc5e" class="ScoreBar2">4.0</span>
+                    <div class="star-ratings">
+                        <div class="star-ratings-fill space-x-2 text-lg" style="width: 60px">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                        <div class="star-ratings-base space-x-2 text-lg">
+                            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="satis_review">
+                <span>만족도</span>                
+                <span>3.0</span>
+                <div class="star-ratings">
+                    <div class="star-ratings-fill space-x-2 text-lg" style="width: 72px">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                    <div class="star-ratings-base space-x-2 text-lg">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                </div>
+            </div>
+    
+            <div class = "review_percent">
+            
+            </div>
+                
+        
+            <div class="star-rating">
+                <input type="radio" id="5-stars" name="rating" value="5" />
+                <label for="5-stars" class="star">&#9733;</label>
+                <input type="radio" id="4-stars" name="rating" value="4" />
+                <label for="4-stars" class="star">&#9733;</label>
+                <input type="radio" id="3-stars" name="rating" value="3" />
+                <label for="3-stars" class="star">&#9733;</label>
+                <input type="radio" id="2-stars" name="rating" value="2" />
+                <label for="2-stars" class="star">&#9733;</label>
+                <input type="radio" id="1-star" name="rating" value="1" />
+                <label for="1-star" class="star">&#9733;</label>
+            </div>
+        
+        </div>
+
+
+    </div>
+    
+    
+
+
+
+
+    
+    <!--TODO 지도 API JS -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=64205cd46d901cfce2d043ca4be73f11&libraries=clusterer,services"></script>
+
+
+
+
+    
+    <script src="js/main.js"></script>
+</body>
+</html>
