@@ -5,7 +5,9 @@
 밑의 "구현 결과"에 나오는 안내에서 서비스1은 주로 다른 조원들이, 서비스2는 주로 제가 만들었습니다.
 
 (1) demo/src/main/java/com/example/demo 폴더에 장소 도메인, repository, MVC 컨트롤러 등 구현(내가 맡은 역할)
+
 (2) demo/src/main/webapp/WEB-INF 폴더에 jsp 파일 4개 구현(내가 맡은 역할)
+
 (3) demo/src/main/webapp 폴더에 필요한 html,css,js 파일들 구현(다른 조원들이 맡은 역할)
 
 <<구현 결과>>
