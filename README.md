@@ -24,4 +24,12 @@
 
 ![캡처](https://user-images.githubusercontent.com/65271296/191299718-1474010d-b690-4279-a0ce-b508e6738940.JPG)
 
-(2)
+(2) 새로운 리뷰들 검색할 수 있는 페이지
+
+![캡처](https://user-images.githubusercontent.com/65271296/191300277-1526f583-08e3-4baf-ae30-e42b8d495717.JPG)
+
+(3) 주소 검색시 나오는 결과
+
+![캡처](https://user-images.githubusercontent.com/65271296/191300542-189bc242-a732-4ebe-a054-b3ec2a6e2edb.JPG)
+
+
