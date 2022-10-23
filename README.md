@@ -17,8 +17,8 @@
 ![캡처](https://user-images.githubusercontent.com/65271296/191298080-59c4877a-77bd-4365-9397-500f5b18d71a.JPG)
 
 
-<서비스1. 신촌 근처 모음>
-(1) 신촌 검색시 나오는 지도 서비스
+<서비스1. 몇몇 대학 근처 모음>
+(1) 몇몇 대학 근처 검색시 나오는 지도 서비스
 
 ![캡처](https://user-images.githubusercontent.com/65271296/191298897-9228da3c-3252-453c-8550-a3cf5ba64c99.JPG)
 
